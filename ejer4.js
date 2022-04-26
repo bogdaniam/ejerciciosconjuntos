@@ -20,33 +20,34 @@ alert ("se te han agotado los intentos")}
 }while(numero_de_veces<3)
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
 const user = "mihai";
 const pass = "1234";
-function login () {
-    for (let n = 3; n > 0; n--){
-        alert(`Tienes ${n} intentos para el Login`);
-        let user1 = window.prompt("Introduce tu usuario: ");
-        let pass1 = window.prompt("introduce tu contraseña: ");
+function login (){
+    for (let n = 3; n > 0; n--) {
+        alert(`Tienes ${n} intentos`)
+        let user1 = window.prompt("Introduce el usuario: ");
+        let pass1 = window.prompt("Introduce la contraseña: ");
+        
         if (user === user1 && pass === pass1) {
-        alert("Datos introducidos correctos")
-         n = 0;
+            alert("Usuario y contraseña correctos.");
+            n = 0;
         } else {
-        alert(`Datos introducidos erroneos.`)
+            alert("Usuario y contraseña incorrectos");
+
         }
     }
-};
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

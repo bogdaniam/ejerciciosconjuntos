@@ -1,4 +1,3 @@
-
 function suma() {
     let n1 = window.prompt("Añade primer numero: ");
     n1 = Number(n1);
@@ -18,4 +17,3 @@ function resta() {
 
     alert(`La resta de ${n1} y ${n2} es ${n3}`);
 };
-

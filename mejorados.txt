@@ -1,0 +1,114 @@
+1.Solicita al usuario tres números enteros e indícale cuál es el menor.
+ Además debe volver el mayor de esos numeros si la suma de los tres numeros solicitados es menor que 15.
+
+3. Suma o resta (según elija el usuario) dos números reales
+SI fueran iguales los numeros, pedirle al usuario el nombre y devolverle la cantidad de letras que tiene su nombre.
+
+4. Almacena en dos variables datos de validación (usuario y contraseña) correctos y permite que el usuario valide (dispone de 3 intentos)
+En caso de error en el usuario O en el password devolver mensaje de error: "Datos incorrectos".
+En caso de que gastar todos los intentos dar un mensaje de  : "En 15 minutos podrás volver a loguearte".
+6. Ordena alfabéticamente un array con 7 palabras, puedes usar el algoritmo de la burbuja
+   Solicita al usuario una palabra, o un numero y los ordena de forma decreciente.
+
+ejer1
+let n1 = window.prompt("Introduce el primer numero: ");
+n1 = Number(n1);
+let n2 = window.prompt("Introduce el segundo numero: ");
+n2 = Number(n2);
+let n3 = window.prompt("Introduce el tercer numero: ");
+n3 = Number(n3);
+let resultado;
+let n4 = n1 + n2 + n3
+console.log(n4);
+if (n1 < n2 && n1 < n3) {
+    alert("el primer numero es el menor");
+
+} else if (n2 < n1 && n2 < n3) {
+
+    alert("el segundo numero es el menor");
+} else if (n3 < n1 && n3 < n2) {
+    alert("el tercer numero es el menor");
+}  else if(n1 < n2 && n1==n3){
+    alert("el primero " +n1 +" y el tercero " +n3+ " son los menores");
+
+}  else if(n2 < n1 && n2==n3) {
+    alert("el segundo " +n2+ " y el tercero " +n3+ " son los menores");
+  
+}  else if(n1 < n3 && n2==n1) {
+        alert("el primero " +n1+ " y el segundo " +n2+ " son los menores");
+
+} else {
+    alert("los tres numeros son iguales")
+}
+
+if (n4 < 15) {
+    if (n1 > n2 && n1 > n3) {
+        alert(`El mayor numero es ${n1}`);
+
+    } else if (n2 > n1 && n2 > n3) {
+
+        alert(`El mayor numero es ${n2}`);
+    } else {
+        alert(`El mayor numero es ${n3}`);
+    }
+} else {
+     alert("la suma es igual o mayor a 15")
+ }
+
+
+ejer3
+
+function suma() {
+    let n1 = window.prompt("Añade primer numero: ");
+    n1 = Number(n1);
+    let n2 = window.prompt("Añade segundo numero: ");
+    n2 = Number(n2);
+    let n3 = n1 + n2;
+    
+    alert(`La suma de ${n1} y ${n2} es ${n3}`);
+    if (n1 == n2) {
+        let nombre = prompt("Introduce tu nombre: ")
+        alert("tu nombre tiene "+nombre.length+" letras");
+    }
+};
+
+function resta() {
+    let n1 = window.prompt("Añade primer numero: ");
+    n1 = Number(n1);
+    let n2 = window.prompt("Añade segundo numero: ");
+    n2 = Number(n2);
+    let n3 = n1 - n2;
+
+    alert(`La resta de ${n1} y ${n2} es ${n3}`);
+    if (n1 == n2){
+    let nombre = prompt("Introduce tu nombre: ")
+    alert("tu nombre tiene "+nombre.length+" letras");
+    }
+};
+
+ejer4
+let usuario = 0;
+let contraseña = 0;
+const usuario1 = "gustavo";
+const contraseña1 = "1234";
+let n1 = 3;
+do {
+    usuario = prompt("usuario")
+    contraseña = prompt("contraseña");
+    if (usuario == usuario1 && contraseña == contraseña1) {
+        alert("usuario y contraseña correctos");
+        n1 = 0;
+    } else if (usuario != usuario1 || contraseña != contraseña1) {
+        n1--;
+        if (n1 > 0) {
+            alert("usuario o contraseña incorrectos te quedan " + n1 + " intentos");
+        } else if (n1 == 0) {
+            alert("se han acabado los intentos")
+        }
+
+    }
+} while (n1 > 0)
+
+
+
+
